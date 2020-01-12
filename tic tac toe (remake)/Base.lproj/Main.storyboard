@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina5_9" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -9,16 +10,152 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="tic_tac_toe__remake_" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Cross Turn" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Txf-VA-AHT">
+                                <rect key="frame" x="70" y="122.66666666666669" width="235" height="36"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="250" verticalCompressionResistancePriority="250" image="grid full scale 2" translatesAutoresizingMaskIntoConstraints="NO" id="oUv-vv-N2x">
+                                <rect key="frame" x="10" y="228.66666666666663" width="355" height="355"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="oUv-vv-N2x" secondAttribute="height" multiplier="1:1" id="7a6-jh-BQF"/>
+                                </constraints>
+                                <viewLayoutGuide key="safeArea" id="PU8-ql-5SA"/>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="KGf-wa-RaI">
+                                <rect key="frame" x="10" y="228" width="355" height="113"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vfb-B9-dtb">
+                                        <rect key="frame" x="0.0" y="0.0" width="113" height="113"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="Vfb-B9-dtb" secondAttribute="height" multiplier="1:1" id="UUT-1x-0Eg"/>
+                                        </constraints>
+                                        <state key="normal" title="Button" image="Cross"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TaS-gV-lha">
+                                        <rect key="frame" x="121" y="0.0" width="113" height="113"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="TaS-gV-lha" secondAttribute="height" multiplier="1:1" id="zfu-ut-oJ1"/>
+                                        </constraints>
+                                        <state key="normal" title="Button" image="Cross"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="84y-IV-bHr">
+                                        <rect key="frame" x="242" y="0.0" width="113" height="113"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="84y-IV-bHr" secondAttribute="height" multiplier="1:1" id="8dg-Gk-dJd"/>
+                                        </constraints>
+                                        <state key="normal" title="Button" image="Cross"/>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="TaS-gV-lha" firstAttribute="width" secondItem="Vfb-B9-dtb" secondAttribute="width" id="S1o-4z-aYJ"/>
+                                    <constraint firstItem="84y-IV-bHr" firstAttribute="width" secondItem="Vfb-B9-dtb" secondAttribute="width" id="wPU-4g-srU"/>
+                                    <constraint firstItem="TaS-gV-lha" firstAttribute="height" secondItem="Vfb-B9-dtb" secondAttribute="height" id="wne-Ca-vKx"/>
+                                    <constraint firstItem="84y-IV-bHr" firstAttribute="height" secondItem="Vfb-B9-dtb" secondAttribute="height" id="ynm-1W-oAV"/>
+                                </constraints>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="0nf-DZ-o04">
+                                <rect key="frame" x="10" y="350" width="355" height="113"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZYa-I8-pxL">
+                                        <rect key="frame" x="0.0" y="0.0" width="113" height="113"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="ZYa-I8-pxL" secondAttribute="height" multiplier="1:1" id="rxF-ge-Ywy"/>
+                                        </constraints>
+                                        <state key="normal" title="Button" image="Cross"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qc2-AN-LID">
+                                        <rect key="frame" x="121" y="0.0" width="113" height="113"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="Qc2-AN-LID" secondAttribute="height" multiplier="1:1" id="y7t-bC-cHO"/>
+                                        </constraints>
+                                        <state key="normal" title="Button" image="Cross"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="co4-1a-tBM">
+                                        <rect key="frame" x="242" y="0.0" width="113" height="113"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="co4-1a-tBM" secondAttribute="height" multiplier="1:1" id="O91-IF-PrQ"/>
+                                        </constraints>
+                                        <state key="normal" title="Button" image="Cross"/>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="Qc2-AN-LID" firstAttribute="width" secondItem="ZYa-I8-pxL" secondAttribute="width" id="3Kj-Bn-pmx"/>
+                                    <constraint firstItem="co4-1a-tBM" firstAttribute="height" secondItem="ZYa-I8-pxL" secondAttribute="height" id="Rlk-zs-QHz"/>
+                                    <constraint firstItem="co4-1a-tBM" firstAttribute="width" secondItem="ZYa-I8-pxL" secondAttribute="width" id="YSR-Us-aeC"/>
+                                    <constraint firstItem="Qc2-AN-LID" firstAttribute="height" secondItem="ZYa-I8-pxL" secondAttribute="height" id="c1s-fg-ZUK"/>
+                                </constraints>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="MHQ-2A-BnZ">
+                                <rect key="frame" x="10" y="472" width="355" height="113"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Irb-4Q-ibk">
+                                        <rect key="frame" x="0.0" y="0.0" width="113" height="113"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="Irb-4Q-ibk" secondAttribute="height" multiplier="1:1" id="cbg-kV-crh"/>
+                                        </constraints>
+                                        <state key="normal" title="Button" image="Cross"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hcn-W0-i9X">
+                                        <rect key="frame" x="121" y="0.0" width="113" height="113"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="Hcn-W0-i9X" secondAttribute="height" multiplier="1:1" id="KMH-5V-1r5"/>
+                                        </constraints>
+                                        <state key="normal" title="Button" image="Cross"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yxR-t2-q3l">
+                                        <rect key="frame" x="242" y="0.0" width="113" height="113"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="yxR-t2-q3l" secondAttribute="height" multiplier="1:1" id="6da-fq-NfV"/>
+                                        </constraints>
+                                        <state key="normal" title="Button" image="Cross"/>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="Hcn-W0-i9X" firstAttribute="width" secondItem="Irb-4Q-ibk" secondAttribute="width" id="0xZ-uo-47k"/>
+                                    <constraint firstItem="yxR-t2-q3l" firstAttribute="height" secondItem="Irb-4Q-ibk" secondAttribute="height" id="4L5-mR-8l8"/>
+                                    <constraint firstItem="yxR-t2-q3l" firstAttribute="width" secondItem="Irb-4Q-ibk" secondAttribute="width" id="8kT-Gt-d39"/>
+                                    <constraint firstItem="Hcn-W0-i9X" firstAttribute="height" secondItem="Irb-4Q-ibk" secondAttribute="height" id="UJa-kX-M3i"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="MHQ-2A-BnZ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="2XT-kW-pvg"/>
+                            <constraint firstItem="oUv-vv-N2x" firstAttribute="top" secondItem="Txf-VA-AHT" secondAttribute="bottom" constant="70" id="4jM-S3-pjL"/>
+                            <constraint firstItem="oUv-vv-N2x" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="AYg-Db-Exa"/>
+                            <constraint firstItem="MHQ-2A-BnZ" firstAttribute="width" secondItem="KGf-wa-RaI" secondAttribute="width" id="CRH-Wy-y4k"/>
+                            <constraint firstItem="0nf-DZ-o04" firstAttribute="height" secondItem="KGf-wa-RaI" secondAttribute="height" id="DA9-st-n2f"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Txf-VA-AHT" secondAttribute="trailing" constant="70" id="EMU-Iq-ydU"/>
+                            <constraint firstItem="MHQ-2A-BnZ" firstAttribute="top" secondItem="0nf-DZ-o04" secondAttribute="bottom" constant="9" id="Fig-fH-GOS"/>
+                            <constraint firstItem="0nf-DZ-o04" firstAttribute="top" secondItem="KGf-wa-RaI" secondAttribute="bottom" constant="9" id="Gbq-rc-XeE"/>
+                            <constraint firstItem="Txf-VA-AHT" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="70" id="JoV-0c-usY"/>
+                            <constraint firstItem="Txf-VA-AHT" firstAttribute="top" relation="greaterThanOrEqual" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="10" id="L9g-sB-6Jr"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="KGf-wa-RaI" secondAttribute="trailing" constant="-6" id="QoI-VZ-BLR"/>
+                            <constraint firstItem="MHQ-2A-BnZ" firstAttribute="height" secondItem="KGf-wa-RaI" secondAttribute="height" id="TZ8-tK-M64"/>
+                            <constraint firstItem="oUv-vv-N2x" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="Zb1-oU-Dcf"/>
+                            <constraint firstItem="0nf-DZ-o04" firstAttribute="width" secondItem="KGf-wa-RaI" secondAttribute="width" id="b2V-de-d1q"/>
+                            <constraint firstItem="KGf-wa-RaI" firstAttribute="top" secondItem="Txf-VA-AHT" secondAttribute="bottom" constant="69.333333333333314" id="coH-EF-l5u"/>
+                            <constraint firstItem="0nf-DZ-o04" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="fvw-4a-kRz"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="oUv-vv-N2x" secondAttribute="trailing" constant="10" id="z0a-2h-XRk"/>
+                            <constraint firstItem="KGf-wa-RaI" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="zBF-IX-clq"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="138.40000000000001" y="117.48768472906404"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Cross" width="284" height="290"/>
+        <image name="grid full scale 2" width="327.33334350585938" height="328"/>
+    </resources>
 </document>
