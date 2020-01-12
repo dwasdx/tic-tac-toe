@@ -31,26 +31,35 @@
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="KGf-wa-RaI">
                                 <rect key="frame" x="10" y="228" width="355" height="113"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vfb-B9-dtb">
+                                    <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vfb-B9-dtb">
                                         <rect key="frame" x="0.0" y="0.0" width="113" height="113"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="Vfb-B9-dtb" secondAttribute="height" multiplier="1:1" id="UUT-1x-0Eg"/>
                                         </constraints>
-                                        <state key="normal" title="Button" image="Cross"/>
+                                        <state key="normal" title="Button"/>
+                                        <connections>
+                                            <action selector="buttonPress:" destination="BYZ-38-t0r" eventType="touchUpInside" id="7me-CH-FvP"/>
+                                        </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TaS-gV-lha">
+                                    <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TaS-gV-lha">
                                         <rect key="frame" x="121" y="0.0" width="113" height="113"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="TaS-gV-lha" secondAttribute="height" multiplier="1:1" id="zfu-ut-oJ1"/>
                                         </constraints>
-                                        <state key="normal" title="Button" image="Cross"/>
+                                        <state key="normal" title="Button"/>
+                                        <connections>
+                                            <action selector="buttonPress:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Wkg-hX-HEe"/>
+                                        </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="84y-IV-bHr">
+                                    <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="84y-IV-bHr">
                                         <rect key="frame" x="242" y="0.0" width="113" height="113"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="84y-IV-bHr" secondAttribute="height" multiplier="1:1" id="8dg-Gk-dJd"/>
                                         </constraints>
-                                        <state key="normal" title="Button" image="Cross"/>
+                                        <state key="normal" title="Button"/>
+                                        <connections>
+                                            <action selector="buttonPress:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Bqa-ge-4YE"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <constraints>
@@ -63,26 +72,35 @@
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="0nf-DZ-o04">
                                 <rect key="frame" x="10" y="350" width="355" height="113"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZYa-I8-pxL">
+                                    <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZYa-I8-pxL">
                                         <rect key="frame" x="0.0" y="0.0" width="113" height="113"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="ZYa-I8-pxL" secondAttribute="height" multiplier="1:1" id="rxF-ge-Ywy"/>
                                         </constraints>
-                                        <state key="normal" title="Button" image="Cross"/>
+                                        <state key="normal" title="Button"/>
+                                        <connections>
+                                            <action selector="buttonPress:" destination="BYZ-38-t0r" eventType="touchUpInside" id="VdY-G2-9Ep"/>
+                                        </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qc2-AN-LID">
+                                    <button opaque="NO" tag="5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qc2-AN-LID">
                                         <rect key="frame" x="121" y="0.0" width="113" height="113"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="Qc2-AN-LID" secondAttribute="height" multiplier="1:1" id="y7t-bC-cHO"/>
                                         </constraints>
-                                        <state key="normal" title="Button" image="Cross"/>
+                                        <state key="normal" title="Button"/>
+                                        <connections>
+                                            <action selector="buttonPress:" destination="BYZ-38-t0r" eventType="touchUpInside" id="sqe-HO-xRS"/>
+                                        </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="co4-1a-tBM">
+                                    <button opaque="NO" tag="6" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="co4-1a-tBM">
                                         <rect key="frame" x="242" y="0.0" width="113" height="113"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="co4-1a-tBM" secondAttribute="height" multiplier="1:1" id="O91-IF-PrQ"/>
                                         </constraints>
-                                        <state key="normal" title="Button" image="Cross"/>
+                                        <state key="normal" title="Button"/>
+                                        <connections>
+                                            <action selector="buttonPress:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ceO-jN-5EU"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <constraints>
@@ -95,26 +113,35 @@
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="MHQ-2A-BnZ">
                                 <rect key="frame" x="10" y="472" width="355" height="113"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Irb-4Q-ibk">
+                                    <button opaque="NO" tag="7" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Irb-4Q-ibk">
                                         <rect key="frame" x="0.0" y="0.0" width="113" height="113"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="Irb-4Q-ibk" secondAttribute="height" multiplier="1:1" id="cbg-kV-crh"/>
                                         </constraints>
-                                        <state key="normal" title="Button" image="Cross"/>
+                                        <state key="normal" title="Button"/>
+                                        <connections>
+                                            <action selector="buttonPress:" destination="BYZ-38-t0r" eventType="touchUpInside" id="R1R-jH-BDU"/>
+                                        </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hcn-W0-i9X">
+                                    <button opaque="NO" tag="8" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hcn-W0-i9X">
                                         <rect key="frame" x="121" y="0.0" width="113" height="113"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="Hcn-W0-i9X" secondAttribute="height" multiplier="1:1" id="KMH-5V-1r5"/>
                                         </constraints>
-                                        <state key="normal" title="Button" image="Cross"/>
+                                        <state key="normal" title="Button"/>
+                                        <connections>
+                                            <action selector="buttonPress:" destination="BYZ-38-t0r" eventType="touchUpInside" id="RJM-FN-oeh"/>
+                                        </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yxR-t2-q3l">
+                                    <button opaque="NO" tag="9" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yxR-t2-q3l">
                                         <rect key="frame" x="242" y="0.0" width="113" height="113"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="yxR-t2-q3l" secondAttribute="height" multiplier="1:1" id="6da-fq-NfV"/>
                                         </constraints>
-                                        <state key="normal" title="Button" image="Cross"/>
+                                        <state key="normal" title="Button"/>
+                                        <connections>
+                                            <action selector="buttonPress:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Bhx-1P-kdq"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <constraints>
@@ -148,6 +175,9 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="turnLabel" destination="Txf-VA-AHT" id="Asj-Wu-3LT"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -155,7 +185,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="Cross" width="284" height="290"/>
         <image name="grid full scale 2" width="327.33334350585938" height="328"/>
     </resources>
 </document>
