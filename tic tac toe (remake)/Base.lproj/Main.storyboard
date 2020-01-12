@@ -151,6 +151,20 @@
                                     <constraint firstItem="Hcn-W0-i9X" firstAttribute="height" secondItem="Irb-4Q-ibk" secondAttribute="height" id="UJa-kX-M3i"/>
                                 </constraints>
                             </stackView>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="abN-Oz-yWm">
+                                <rect key="frame" x="112.66666666666669" y="623.66666666666663" width="150" height="44"/>
+                                <color key="backgroundColor" systemColor="linkColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="abN-Oz-yWm" secondAttribute="height" multiplier="75:22" id="gBU-yK-id5"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="26"/>
+                                <state key="normal" title="Restart">
+                                    <color key="titleColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                </state>
+                                <connections>
+                                    <action selector="restartButtonAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="VfY-Mm-pDY"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
@@ -158,12 +172,14 @@
                             <constraint firstItem="oUv-vv-N2x" firstAttribute="top" secondItem="Txf-VA-AHT" secondAttribute="bottom" constant="70" id="4jM-S3-pjL"/>
                             <constraint firstItem="oUv-vv-N2x" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="AYg-Db-Exa"/>
                             <constraint firstItem="MHQ-2A-BnZ" firstAttribute="width" secondItem="KGf-wa-RaI" secondAttribute="width" id="CRH-Wy-y4k"/>
+                            <constraint firstItem="abN-Oz-yWm" firstAttribute="top" secondItem="oUv-vv-N2x" secondAttribute="bottom" constant="40" id="Cvx-xy-fwv"/>
                             <constraint firstItem="0nf-DZ-o04" firstAttribute="height" secondItem="KGf-wa-RaI" secondAttribute="height" id="DA9-st-n2f"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Txf-VA-AHT" secondAttribute="trailing" constant="70" id="EMU-Iq-ydU"/>
                             <constraint firstItem="MHQ-2A-BnZ" firstAttribute="top" secondItem="0nf-DZ-o04" secondAttribute="bottom" constant="9" id="Fig-fH-GOS"/>
                             <constraint firstItem="0nf-DZ-o04" firstAttribute="top" secondItem="KGf-wa-RaI" secondAttribute="bottom" constant="9" id="Gbq-rc-XeE"/>
                             <constraint firstItem="Txf-VA-AHT" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="70" id="JoV-0c-usY"/>
                             <constraint firstItem="Txf-VA-AHT" firstAttribute="top" relation="greaterThanOrEqual" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="10" id="L9g-sB-6Jr"/>
+                            <constraint firstItem="abN-Oz-yWm" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Msj-IT-s7l"/>
                             <constraint firstAttribute="trailingMargin" secondItem="KGf-wa-RaI" secondAttribute="trailing" constant="-6" id="QoI-VZ-BLR"/>
                             <constraint firstItem="MHQ-2A-BnZ" firstAttribute="height" secondItem="KGf-wa-RaI" secondAttribute="height" id="TZ8-tK-M64"/>
                             <constraint firstItem="oUv-vv-N2x" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="Zb1-oU-Dcf"/>
@@ -176,6 +192,7 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
+                        <outlet property="restartButtonOutlet" destination="abN-Oz-yWm" id="0RW-nh-jMZ"/>
                         <outlet property="turnLabel" destination="Txf-VA-AHT" id="Asj-Wu-3LT"/>
                     </connections>
                 </viewController>
