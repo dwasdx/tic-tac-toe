@@ -13,8 +13,7 @@
 		753466E723CB732000FF327B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 753466E523CB732000FF327B /* Main.storyboard */; };
 		753466E923CB732200FF327B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 753466E823CB732200FF327B /* Assets.xcassets */; };
 		753466EC23CB732200FF327B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 753466EA23CB732200FF327B /* LaunchScreen.storyboard */; };
-		75AD727523CF40D100D2D803 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75AD727423CF40D100D2D803 /* SettingsViewController.swift */; };
-		75AD727723CF490000D2D803 /* SettingsClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75AD727623CF490000D2D803 /* SettingsClass.swift */; };
+		75AD727923CF726300D2D803 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75AD727823CF726300D2D803 /* SettingsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,8 +25,7 @@
 		753466E823CB732200FF327B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		753466EB23CB732200FF327B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		753466ED23CB732200FF327B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		75AD727423CF40D100D2D803 /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
-		75AD727623CF490000D2D803 /* SettingsClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsClass.swift; sourceTree = "<group>"; };
+		75AD727823CF726300D2D803 /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,9 +61,8 @@
 				753466DF23CB732000FF327B /* AppDelegate.swift */,
 				753466E123CB732000FF327B /* SceneDelegate.swift */,
 				753466E323CB732000FF327B /* GameViewController.swift */,
-				75AD727423CF40D100D2D803 /* SettingsViewController.swift */,
+				75AD727823CF726300D2D803 /* SettingsViewController.swift */,
 				753466E523CB732000FF327B /* Main.storyboard */,
-				75AD727623CF490000D2D803 /* SettingsClass.swift */,
 				753466E823CB732200FF327B /* Assets.xcassets */,
 				753466EA23CB732200FF327B /* LaunchScreen.storyboard */,
 				753466ED23CB732200FF327B /* Info.plist */,
@@ -145,11 +142,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				75AD727723CF490000D2D803 /* SettingsClass.swift in Sources */,
 				753466E423CB732000FF327B /* GameViewController.swift in Sources */,
 				753466E023CB732000FF327B /* AppDelegate.swift in Sources */,
+				75AD727923CF726300D2D803 /* SettingsViewController.swift in Sources */,
 				753466E223CB732000FF327B /* SceneDelegate.swift in Sources */,
-				75AD727523CF40D100D2D803 /* SettingsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -302,7 +298,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "globus.tic-tac-toe--remake-";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "tic tac toe (remake)/tic tac toe (remake)-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -322,7 +318,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "globus.tic-tac-toe--remake-";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "tic tac toe (remake)/tic tac toe (remake)-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

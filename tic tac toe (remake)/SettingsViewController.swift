@@ -9,6 +9,12 @@
 import UIKit
 import os.log
 
+struct Settings {
+    var crossName = "Cross"
+    var circleName = "Circle"
+    var isAI = Players.none
+}
+
 class SettingsViewController: UIViewController, UITextFieldDelegate {
     
     //MARK: Outlets
@@ -21,7 +27,7 @@ class SettingsViewController: UIViewController, UITextFieldDelegate {
     //MARK: Properties
     var settings: Settings!
     
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -36,6 +42,7 @@ class SettingsViewController: UIViewController, UITextFieldDelegate {
     }
     
     func textFieldDidEndEditing(_ textField: UITextField) {
+        
     }
     
     

@@ -134,11 +134,7 @@
                     </view>
                     <navigationItem key="navigationItem" title="Settings" id="bgg-Bq-QkM">
                         <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="QkN-vK-i3N"/>
-                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="fpn-Zl-2Sa">
-                            <connections>
-                                <segue destination="hJa-aD-mZb" kind="unwind" unwindAction="unwindToGameFieldWithSender:" id="mei-c8-zr7"/>
-                            </connections>
-                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="fpn-Zl-2Sa"/>
                     </navigationItem>
                     <connections>
                         <outlet property="circleSwitch" destination="T5B-AQ-C1C" id="gOd-L3-3IF"/>
@@ -153,7 +149,7 @@
                 <exit id="hJa-aD-mZb" userLabel="Exit" sceneMemberID="exit"/>
                 <swipeGestureRecognizer direction="right" id="7Re-Mi-5aQ"/>
             </objects>
-            <point key="canvasLocation" x="967" y="117"/>
+            <point key="canvasLocation" x="1132" y="117"/>
         </scene>
         <!--Game-->
         <scene sceneID="tne-QT-ifu">
@@ -354,7 +350,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-591" y="117"/>
+            <point key="canvasLocation" x="-650" y="117"/>
         </scene>
     </scenes>
     <resources>
