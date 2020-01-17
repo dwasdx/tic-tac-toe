@@ -39,23 +39,29 @@ class GameViewController: UIViewController {
     
     //MARK: Actions
     @IBAction func buttonPress(_ sender: UIButton) {
+        if !cellsState.contains(true) && settings.isAI != .none {
+            
+        }
         if isActiveGame {
             if settings.isAI == .none {
                 if currPlayer == .Cross {
                     sender.setImage(UIImage(named: "Cross.png"), for: UIControl.State())
                     turnLabel.text = "\(settings.circleName) Turn"
                     currPlayer = .Circle
+                    cellsState[sender.tag - 1] = true
                     crossCells.insert(sender.tag - 1)
                 } else {
                     sender.setImage(UIImage(named: "Circle.png"), for: UIControl.State())
                     turnLabel.text = "\(settings.crossName) Turn"
                     currPlayer = .Cross
+                    cellsState[sender.tag - 1] = true
                     circleCells.insert(sender.tag - 1)
                 }
             } else if settings.isAI == .Circle {
-                sender.setImage(UIImage(named: "Cross.png"), for: UIControl.State())
+                sender.setImage(UIImage(named: "\(settings.isAI).png"), for: UIControl.State())
                 turnLabel.text = "Your turn"
                 crossCells.insert(sender.tag - 1)
+                cellsState[sender.tag - 1] = true
                 let index = randChoice()
                 aiAction(index)
                 circleCells.insert(index)
@@ -63,6 +69,7 @@ class GameViewController: UIViewController {
                 sender.setImage(UIImage(named: "Circle.png"), for: UIControl.State())
                 turnLabel.text = "Your turn"
                 circleCells.insert(sender.tag - 1)
+                cellsState[sender.tag - 1] = true
                 let index = randChoice()
                 aiAction(index)
                 crossCells.insert(index)
@@ -98,7 +105,7 @@ class GameViewController: UIViewController {
             }
             turnLabel.layer.backgroundColor = UIColor(red: 255/255, green: 255/255, blue: 255/255, alpha: 1.0).cgColor
             turnLabel.textColor = UIColor.black
-            turnLabel.text = "Cross Turn"
+            turnLabel.text = "\(settings.crossName) Turn"
             turnLabel.font = UIFont.systemFont(ofSize: 30.0)
         }
     }

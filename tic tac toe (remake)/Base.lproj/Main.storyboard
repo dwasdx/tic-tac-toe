@@ -294,7 +294,11 @@
                     </view>
                     <navigationItem key="navigationItem" title="Swttings" id="vZp-MJ-Hb6">
                         <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="k63-Ab-akM"/>
-                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="7Ls-du-IQP"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="7Ls-du-IQP">
+                            <connections>
+                                <segue destination="7cc-uL-BVD" kind="unwind" unwindAction="unwindToGameFieldWithSender:" id="u9k-el-EV6"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="circleSwitch" destination="UlA-jt-5jP" id="IHe-rG-eWA"/>
@@ -305,6 +309,7 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dVP-s1-Mag" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="7cc-uL-BVD" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="1260" y="116.74876847290641"/>
         </scene>
