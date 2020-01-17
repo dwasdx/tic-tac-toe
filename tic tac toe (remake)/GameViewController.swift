@@ -39,10 +39,7 @@ class GameViewController: UIViewController {
     
     //MARK: Actions
     @IBAction func buttonPress(_ sender: UIButton) {
-        if !cellsState.contains(true) && settings.isAI != .none {
-            
-        }
-        if isActiveGame {
+        if isActiveGame && !cellsState[sender.tag - 1] {
             if settings.isAI == .none {
                 if currPlayer == .Cross {
                     sender.setImage(UIImage(named: "Cross.png"), for: UIControl.State())
@@ -57,25 +54,26 @@ class GameViewController: UIViewController {
                     cellsState[sender.tag - 1] = true
                     circleCells.insert(sender.tag - 1)
                 }
-            } else if settings.isAI == .Circle {
-                sender.setImage(UIImage(named: "\(settings.isAI).png"), for: UIControl.State())
-                turnLabel.text = "Your turn"
-                crossCells.insert(sender.tag - 1)
-                cellsState[sender.tag - 1] = true
-                let index = randChoice()
-                aiAction(index)
-                circleCells.insert(index)
             } else if settings.isAI == .Cross {
                 sender.setImage(UIImage(named: "Circle.png"), for: UIControl.State())
-                turnLabel.text = "Your turn"
+//                turnLabel.text = "Your turn"
                 circleCells.insert(sender.tag - 1)
                 cellsState[sender.tag - 1] = true
                 let index = randChoice()
-                aiAction(index)
                 crossCells.insert(index)
+                cellsState[index] = true
+                aiAction(index)
+            } else if settings.isAI == .Circle {
+                sender.setImage(UIImage(named: "Cross.png"), for: UIControl.State())
+                //                turnLabel.text = "Your turn"
+                crossCells.insert(sender.tag - 1)
+                cellsState[sender.tag - 1] = true
+                let index = randChoice()
+                circleCells.insert(index)
+                cellsState[index] = true
+                aiAction(index)
             }
         }
-        
         
         cellsState[sender.tag - 1] = true
         
@@ -93,20 +91,29 @@ class GameViewController: UIViewController {
     }
     
     @IBAction func restartButtonAction(_ sender: UIButton) {
-        if !isActiveGame {
-            restartButtonOutlet.isHidden = true
-            cellsState = Array(repeating: false, count: 9)
-            crossCells.removeAll()
-            circleCells.removeAll()
-            isActiveGame = true
-            for i in 1...9 {
-                let button = view.viewWithTag(i) as! UIButton
-                button.setImage(nil, for: UIControl.State())
-            }
-            turnLabel.layer.backgroundColor = UIColor(red: 255/255, green: 255/255, blue: 255/255, alpha: 1.0).cgColor
-            turnLabel.textColor = UIColor.black
-            turnLabel.text = "\(settings.crossName) Turn"
-            turnLabel.font = UIFont.systemFont(ofSize: 30.0)
+        restartButtonOutlet.isHidden = true
+        cellsState = Array(repeating: false, count: 9)
+        crossCells.removeAll()
+        circleCells.removeAll()
+        isActiveGame = true
+        for i in 1...9 {
+            let button = view.viewWithTag(i) as! UIButton
+            button.setImage(nil, for: UIControl.State())
+        }
+        turnLabel.layer.backgroundColor = UIColor(red: 255/255, green: 255/255, blue: 255/255, alpha: 1.0).cgColor
+        turnLabel.textColor = UIColor.black
+        turnLabel.text = "\(settings.crossName) Turn"
+        turnLabel.font = UIFont.systemFont(ofSize: 30.0)
+            
+        if settings.isAI != .none {
+            turnLabel.text = "Your turn"
+        }
+        
+        if !cellsState.contains(true) && settings.isAI == .Cross {
+            let index = randChoice()
+            crossCells.insert(index)
+            cellsState[index] = true
+            aiAction(index)
         }
     }
     
@@ -157,6 +164,17 @@ class GameViewController: UIViewController {
     private func aiAction(_ index: Int) {
         let button = view.viewWithTag(index + 1) as! UIButton
         button.setImage(UIImage(named: "\(settings.isAI).png"), for: UIControl.State())
+        circleCells.insert(index)
+
+    }
+    
+    private func giveCurrPlayer() -> Players {
+        if settings.isAI == .Circle {
+            return .Cross
+        } else if settings.isAI == .Cross {
+            return .Circle
+        }
+        return .none
     }
     
     //MARK: Other
