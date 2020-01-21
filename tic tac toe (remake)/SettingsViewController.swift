@@ -47,7 +47,22 @@ class SettingsViewController: UIViewController, UITextFieldDelegate {
     
     
     //MARK: Actions
+    @IBAction func crossSwitchAction(_ sender: UISwitch) {
+        if circleSwitch.isOn {
+            circleSwitch.setOn(false, animated: true)
+        }
+        crossTextField.isUserInteractionEnabled = false
+        circleTextField.isUserInteractionEnabled = false
+        
+    }
     
+    @IBAction func circleSwitchAction(_ sender: UISwitch) {
+        if crossSwitch.isOn {
+            crossSwitch.setOn(false, animated: true)
+        }
+        crossTextField.isUserInteractionEnabled = false
+        circleTextField.isUserInteractionEnabled = false
+    }
     
     // MARK: - Navigation
 

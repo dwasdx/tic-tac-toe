@@ -59,6 +59,9 @@ class GameViewController: UIViewController {
 //                turnLabel.text = "Your turn"
                 circleCells.insert(sender.tag - 1)
                 cellsState[sender.tag - 1] = true
+                if winCheck() != .none {
+                    return
+                }
                 let index = randChoice()
                 crossCells.insert(index)
                 cellsState[index] = true
@@ -68,6 +71,9 @@ class GameViewController: UIViewController {
                 //                turnLabel.text = "Your turn"
                 crossCells.insert(sender.tag - 1)
                 cellsState[sender.tag - 1] = true
+                if winCheck() != .none {
+                    return
+                }
                 let index = randChoice()
                 circleCells.insert(index)
                 cellsState[index] = true
@@ -75,18 +81,7 @@ class GameViewController: UIViewController {
             }
         }
         
-        cellsState[sender.tag - 1] = true
-        
-        let isWin = winCheck()
-        if isWin != .none {
-            turnLabel.text = "\(isWin) Won!!"
-            turnLabel.layer.backgroundColor = UIColor(red: 196/255, green: 27/255, blue: 7/255, alpha: 1.0).cgColor
-            turnLabel.textColor = UIColor.white
-            turnLabel.font = UIFont.boldSystemFont(ofSize: 30.0)
-            restartButtonOutlet.isHidden = false
-            isActiveGame = false
-            return
-        }
+        winCheck()
         drawCheck()
     }
     
@@ -128,18 +123,34 @@ class GameViewController: UIViewController {
     
     //MARK: Private Metods
     private func winCheck() -> Players {
+        var win = Players.none
         for comb in self.winningCombs {
             if comb.isSubset(of: crossCells) {
-                return .Cross
+                win = .Cross
+                print("Cross: ", crossCells)
+                print("Comb: ", comb)
+                break
             } else if comb.isSubset(of: circleCells) {
-                return .Circle
+                win = .Circle
+                print("Circle: ", circleCells)
+                print("Comb: ", comb)
+                break
             }
+        }
+        if win != .none {
+            turnLabel.text = "\(win) Won!!"
+            turnLabel.layer.backgroundColor = UIColor(red: 196/255, green: 27/255, blue: 7/255, alpha: 1.0).cgColor
+            turnLabel.textColor = UIColor.white
+            turnLabel.font = UIFont.boldSystemFont(ofSize: 30.0)
+            restartButtonOutlet.isHidden = false
+            isActiveGame = false
+            return win
         }
         return .none
     }
     
     private func drawCheck() {
-        if !cellsState.contains(false) {
+        if isActiveGame && !cellsState.contains(false) {
             restartButtonOutlet.isHidden = false
             isActiveGame = false
             currPlayer = .Cross
@@ -164,7 +175,7 @@ class GameViewController: UIViewController {
     private func aiAction(_ index: Int) {
         let button = view.viewWithTag(index + 1) as! UIButton
         button.setImage(UIImage(named: "\(settings.isAI).png"), for: UIControl.State())
-        circleCells.insert(index)
+//        circleCells.insert(index)
 
     }
     
@@ -180,7 +191,6 @@ class GameViewController: UIViewController {
     //MARK: Other
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
     }
 
 

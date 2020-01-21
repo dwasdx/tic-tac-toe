@@ -209,7 +209,7 @@
                     </view>
                     <navigationItem key="navigationItem" title="Game" leftItemsSupplementBackButton="YES" id="WPk-sy-2GP">
                         <barButtonItem key="backBarButtonItem" title="Settings" id="xjn-2B-Nih"/>
-                        <barButtonItem key="rightBarButtonItem" title="Item" id="S1N-vt-PA8">
+                        <barButtonItem key="rightBarButtonItem" systemItem="edit" id="S1N-vt-PA8">
                             <connections>
                                 <segue destination="Juh-Pe-fej" kind="presentation" id="HgQ-Gf-Z3g"/>
                             </connections>
@@ -238,12 +238,12 @@
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Cross" borderStyle="roundedRect" placeholder="Name for Cross' player" textAlignment="natural" minimumFontSize="17" clearButtonMode="unlessEditing" translatesAutoresizingMaskIntoConstraints="NO" id="Wqo-MQ-0tR">
                                         <rect key="frame" x="0.0" y="0.0" width="260.66666666666669" height="34"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" returnKeyType="done"/>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Circle" borderStyle="roundedRect" placeholder="Name for Circle player" textAlignment="natural" minimumFontSize="17" clearButtonMode="unlessEditing" translatesAutoresizingMaskIntoConstraints="NO" id="Ht8-Mz-d8U">
                                         <rect key="frame" x="0.0" y="38" width="260.66666666666669" height="34"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" returnKeyType="done"/>
                                     </textField>
                                 </subviews>
                             </stackView>
@@ -261,6 +261,9 @@
                                             </label>
                                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Evz-oT-jDt">
                                                 <rect key="frame" x="25.333333333333314" y="0.0" width="51" height="31"/>
+                                                <connections>
+                                                    <action selector="crossSwitchAction:" destination="WsQ-Fz-HAF" eventType="valueChanged" id="QOp-lo-J8p"/>
+                                                </connections>
                                             </switch>
                                         </subviews>
                                     </stackView>
@@ -275,6 +278,9 @@
                                             </label>
                                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="UlA-jt-5jP">
                                                 <rect key="frame" x="25.333333333333314" y="0.0" width="51" height="31"/>
+                                                <connections>
+                                                    <action selector="circleSwitchAction:" destination="WsQ-Fz-HAF" eventType="valueChanged" id="gSE-Kt-UrP"/>
+                                                </connections>
                                             </switch>
                                         </subviews>
                                     </stackView>
