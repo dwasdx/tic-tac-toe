@@ -175,7 +175,6 @@ class GameViewController: UIViewController {
     private func aiAction(_ index: Int) {
         let button = view.viewWithTag(index + 1) as! UIButton
         button.setImage(UIImage(named: "\(settings.isAI).png"), for: UIControl.State())
-//        circleCells.insert(index)
 
     }
     
