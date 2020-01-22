@@ -209,7 +209,7 @@
                     </view>
                     <navigationItem key="navigationItem" title="Game" leftItemsSupplementBackButton="YES" id="WPk-sy-2GP">
                         <barButtonItem key="backBarButtonItem" title="Settings" id="xjn-2B-Nih"/>
-                        <barButtonItem key="rightBarButtonItem" systemItem="edit" id="S1N-vt-PA8">
+                        <barButtonItem key="rightBarButtonItem" title="Settings" id="S1N-vt-PA8">
                             <connections>
                                 <segue destination="Juh-Pe-fej" kind="presentation" id="HgQ-Gf-Z3g"/>
                             </connections>
@@ -224,10 +224,10 @@
             </objects>
             <point key="canvasLocation" x="-650" y="117"/>
         </scene>
-        <!--Swttings-->
+        <!--Settings-->
         <scene sceneID="XZG-2p-xgd">
             <objects>
-                <viewController id="WsQ-Fz-HAF" customClass="SettingsViewController" customModule="Tic_Tac_Toe" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Settings" id="WsQ-Fz-HAF" customClass="SettingsViewController" customModule="Tic_Tac_Toe" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="zEY-ai-0J9">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="758"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -298,7 +298,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="h0U-cT-xJs"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Swttings" id="vZp-MJ-Hb6">
+                    <navigationItem key="navigationItem" title="Settings" id="vZp-MJ-Hb6">
                         <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="k63-Ab-akM">
                             <connections>
                                 <segue destination="7cc-uL-BVD" kind="unwind" unwindAction="unwindCancelToGameFieldWithSender:" id="Rx8-Yg-OF2"/>
