@@ -131,13 +131,9 @@ class GameViewController: UIViewController {
         for comb in self.winningCombs {
             if comb.isSubset(of: crossCells) {
                 win = .Cross
-                print("Cross: ", crossCells)
-                print("Comb: ", comb)
                 break
             } else if comb.isSubset(of: circleCells) {
                 win = .Circle
-                print("Circle: ", circleCells)
-                print("Comb: ", comb)
                 break
             }
         }
