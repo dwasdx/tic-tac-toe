@@ -26,7 +26,7 @@
         <!--Game-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="GameViewController" customModule="tic_tac_toe__remake_" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="GameViewController" customModule="Tic_Tac_Toe" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -227,7 +227,7 @@
         <!--Swttings-->
         <scene sceneID="XZG-2p-xgd">
             <objects>
-                <viewController id="WsQ-Fz-HAF" customClass="SettingsViewController" customModule="tic_tac_toe__remake_" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="WsQ-Fz-HAF" customClass="SettingsViewController" customModule="Tic_Tac_Toe" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="zEY-ai-0J9">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="758"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -299,7 +299,11 @@
                         <viewLayoutGuide key="safeArea" id="h0U-cT-xJs"/>
                     </view>
                     <navigationItem key="navigationItem" title="Swttings" id="vZp-MJ-Hb6">
-                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="k63-Ab-akM"/>
+                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="k63-Ab-akM">
+                            <connections>
+                                <segue destination="7cc-uL-BVD" kind="unwind" unwindAction="unwindCancelToGameFieldWithSender:" id="Rx8-Yg-OF2"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="save" id="7Ls-du-IQP">
                             <connections>
                                 <segue destination="7cc-uL-BVD" kind="unwind" unwindAction="unwindToGameFieldWithSender:" id="u9k-el-EV6"/>
