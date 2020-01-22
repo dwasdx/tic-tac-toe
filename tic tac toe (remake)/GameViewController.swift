@@ -120,9 +120,7 @@ class GameViewController: UIViewController {
         }
     }
     
-    @IBAction func unwindCancelToGameField(sender: UIStoryboardSegue) {
-        if let sourceViewController = sender.source as? SettingsViewController {}
-    }
+    @IBAction func unwindCancelToGameField(sender: UIStoryboardSegue) {}
     
     
     //MARK: Private Metods
