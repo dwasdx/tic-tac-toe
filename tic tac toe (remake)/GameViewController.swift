@@ -136,7 +136,11 @@ class GameViewController: UIViewController {
             }
         }
         if win != .none {
-            turnLabel.text = "\(win) Won!!"
+            if win == .Cross {
+                turnLabel.text = "\(settings.crossName) won!!!"
+            } else {
+                turnLabel.text = "\(settings.circleName) won!!!"
+            }
             turnLabel.layer.backgroundColor = UIColor(red: 196/255, green: 27/255, blue: 7/255, alpha: 1.0).cgColor
             turnLabel.textColor = UIColor.white
             turnLabel.font = UIFont.boldSystemFont(ofSize: 30.0)
